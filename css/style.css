@@ -232,6 +232,14 @@ ul,ol{list-style:none}
 .nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:1px;flex-shrink:0}
 .nav-logo img{width:34px;height:34px;border-radius:9px;box-shadow:var(--glow-gold)}
 .nav-logo b{color:var(--gold)}
+/* 原创声明标签（抖音宣告） */
+.brand-tag{
+  flex-shrink:0;white-space:nowrap;
+  font-size:12px;font-weight:800;letter-spacing:.5px;
+  color:#fff;background:linear-gradient(135deg,#ff4d5e,#ff2d78);
+  padding:4px 11px;border-radius:999px;
+  box-shadow:0 3px 12px rgba(255,45,120,.35);
+}
 .nav-links{display:flex;gap:6px;flex:1}
 .nav-link{
   padding:8px 14px;border-radius:10px;font-size:14.5px;font-weight:600;color:var(--text-2);
@@ -566,6 +574,7 @@ ul,ol{list-style:none}
   .g-4,.g-3,.g-2{grid-template-columns:repeat(2,1fr)}
   .g-5{grid-template-columns:repeat(3,1fr)}
   .nav-logo span.hide-sm{display:none}
+  .nav-logo .brand-tag{display:none}
   .nav-search{width:min(170px,38vw)}
   .nav-inner{gap:10px}
   .page-head{padding:24px 0 4px}

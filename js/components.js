@@ -41,6 +41,7 @@ window.WQK.components = (function () {
     const nav = utils.el('header', { class: 'nav' }, [
       utils.el('div', { class: 'container nav-inner' }, [
         utils.el('a', { class: 'nav-logo', href: BASE + 'index.html' }, [
+          utils.el('span', { class: 'brand-tag', text: '抖音：呃呃呃不知道叫什么' }),
           utils.el('img', { src: BASE + 'images/logo.svg', alt: 'logo' }),
           utils.el('span', { html: '王者<b>百科</b><span class="hide-sm" style="font-size:11px;color:var(--text-3);margin-left:6px;font-weight:400">S36</span>' })
         ]),
@@ -53,6 +54,7 @@ window.WQK.components = (function () {
     // 移动端抽屉
     const drawer = utils.el('div', { class: 'nav-drawer', id: 'nav-drawer' }, [
       utils.el('div', { class: 'nav-drawer-box' }, [
+        utils.el('span', { class: 'brand-tag', style: 'align-self:flex-start;margin:0 10px 12px', text: '抖音：呃呃呃不知道叫什么' }),
         utils.el('div', { style: 'display:flex;align-items:center;gap:10px;padding:6px 10px 18px;font-weight:800;font-size:17px', html: '王者<b style="color:var(--gold)">百科</b>' }),
         ...MENU.map(m => utils.el('a', { class: m.id === PAGE ? 'active' : '', href: m.href, text: m.label })),
         utils.el('div', { style: 'margin-top:auto;color:var(--text-3);font-size:12px;padding:10px', text: '纯前端离线百科 · 一键上分' })
