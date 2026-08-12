@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>英雄百科 · 王者百科</title>
+  <meta name="description" content="王者荣耀全英雄百科：按定位/位置筛选，支持热度、胜率、出场率排序。">
+  <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+  <!-- 主题：样式前应用已保存的主题，避免刷新闪变 -->
+  <script>try{var t=localStorage.getItem('wqk-theme')||'system';document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main class="container">
+    <div class="page-head">
+      <h1>英雄百科</h1>
+      <p>收录 <b class="text-gold" id="hero-total">--</b> 位英雄，支持按定位、位置筛选，按热度 / 胜率 / 出场率排序，点击卡片查看完整攻略。</p>
+    </div>
+
+    <!-- 定位筛选 -->
+    <div class="card card-pad" style="margin-top:22px">
+      <div class="filter-bar" id="role-filter" style="margin-bottom:12px"></div>
+      <div class="filter-bar" id="pos-filter" style="margin-bottom:16px"></div>
+
+      <div class="flex-between flex-wrap gap-3" style="padding-top:14px;border-top:1px solid var(--border)">
+        <div class="flex items-center gap-3">
+          <span class="text-dim" style="font-size:13px">排序</span>
+          <select class="input select" id="sort-select" style="width:150px">
+            <option value="热度">🔥 按热度</option>
+            <option value="胜率">📈 按胜率</option>
+            <option value="出场率">👥 按出场率</option>
+          </select>
+        </div>
+        <input class="input" id="kw-input" type="text" placeholder="在当前列表中搜索英雄…" style="max-width:260px">
+        <span class="text-dim" id="hero-count" style="font-size:13px"></span>
+      </div>
+    </div>
+
+    <!-- 英雄网格 -->
+    <section id="hero-grid" class="grid g-4 gap-4" style="margin-top:22px"></section>
+    <div id="hero-empty" class="empty hidden">
+      <div class="ico">🔍</div>
+      <p>没有找到匹配的英雄，换个关键词试试～</p>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    window.PAGE = 'hero';
+    window.BASE_PATH = '../';
+  </script>
+  <!-- 离线数据层（json 数据以 .js 注入，保证 file:// 直跑可用） -->
+  <script src="../json/heroes.js"></script>
+  <script src="../json/items.js"></script>
+  <script src="../json/details.js"></script>
+  <script src="../json/tiers.js"></script>
+  <script src="../json/season.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/components.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/ai-chat.js"></script>
+  <script src="../js/hero-list.js"></script>
+
+</body>
+</html>

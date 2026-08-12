@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>英雄梯度 · 王者百科</title>
+  <meta name="description" content="王者荣耀英雄梯度：按位置展示 T0-T3 梯度榜单，标注强势原因、版本优势、短板缺陷与适配段位。">
+  <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+  <!-- 主题：样式前应用已保存的主题，避免刷新闪变 -->
+  <script>try{var t=localStorage.getItem('wqk-theme')||'system';document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main class="container">
+    <div class="page-head">
+      <h1>英雄梯度</h1>
+      <p>按位置查看当前版本梯度榜单，标注强势原因、版本优势与短板，选人上分不再迷茫。</p>
+    </div>
+
+    <!-- 梯度图例 -->
+    <div class="card card-pad" style="margin-top:22px">
+      <div class="grid g-4 gap-3" id="tier-legend"></div>
+    </div>
+
+    <!-- 位置切换 -->
+    <div class="filter-bar" id="pos-tabs" style="margin-top:18px"></div>
+
+    <!-- 梯度列表 -->
+    <div id="tier-root" style="margin-top:20px"></div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    window.PAGE = 'tier';
+    window.BASE_PATH = '../';
+  </script>
+  <!-- 离线数据层（json 数据以 .js 注入，保证 file:// 直跑可用） -->
+  <script src="../json/heroes.js"></script>
+  <script src="../json/items.js"></script>
+  <script src="../json/details.js"></script>
+  <script src="../json/tiers.js"></script>
+  <script src="../json/season.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/components.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/ai-chat.js"></script>
+  <script src="../js/tier.js"></script>
+
+</body>
+</html>

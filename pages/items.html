@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>装备百科 · 王者百科</title>
+  <meta name="description" content="王者荣耀装备百科：物理、法术、防御、游走、打野、攻速暴击全装备查询，属性、被动、合成路径、适配英雄。">
+  <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+  <!-- 主题：样式前应用已保存的主题，避免刷新闪变 -->
+  <script>try{var t=localStorage.getItem('wqk-theme')||'system';document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main class="container">
+    <div class="page-head">
+      <h1>装备百科</h1>
+      <p>收录 <b class="text-gold" id="item-total">--</b> 件主流装备，涵盖六大分类。点击卡片查看属性、被动/主动效果、合成路径与适配英雄。</p>
+    </div>
+
+    <!-- 分类筛选 + 搜索 -->
+    <div class="card card-pad" style="margin-top:22px">
+      <div class="filter-bar" id="cat-filter" style="padding-bottom:22px"></div>
+      <div class="flex-between flex-wrap gap-3" style="padding:22px 0 0;border-top:1px solid var(--border)">
+        <input class="input" id="kw-input" type="text" placeholder="搜索装备名称…" style="max-width:280px">
+        <span class="text-dim" id="item-count" style="font-size:13px"></span>
+      </div>
+    </div>
+
+    <!-- 装备网格 -->
+    <section id="item-grid" class="grid g-4 gap-4" style="margin-top:22px"></section>
+    <div id="item-empty" class="empty hidden">
+      <div class="ico">🔍</div>
+      <p>没有找到匹配的装备，换个关键词试试～</p>
+    </div>
+  </main>
+
+  <!-- 装备详情弹窗 -->
+  <div id="modal-root"></div>
+
+  <div id="footer"></div>
+
+  <script>
+    window.PAGE = 'items';
+    window.BASE_PATH = '../';
+  </script>
+  <!-- 离线数据层（json 数据以 .js 注入，保证 file:// 直跑可用） -->
+  <script src="../json/heroes.js"></script>
+  <script src="../json/items.js"></script>
+  <script src="../json/details.js"></script>
+  <script src="../json/tiers.js"></script>
+  <script src="../json/season.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/components.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/ai-chat.js"></script>
+  <script src="../js/items.js"></script>
+
+</body>
+</html>

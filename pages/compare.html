@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>英雄对比 · 王者百科</title>
+  <meta name="description" content="王者荣耀英雄对比工具：选择两位英雄，对比六维能力雷达、胜率出场率难度等关键数据与对位关系。">
+  <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+  <!-- 主题：样式前应用已保存的主题，避免刷新闪变 -->
+  <script>try{var t=localStorage.getItem('wqk-theme')||'system';document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main class="container">
+    <div class="page-head">
+      <h1>英雄对比</h1>
+      <p>选择两位英雄，直观对比六维能力、关键数据与对位关系，帮你决定这局选谁。</p>
+    </div>
+
+    <!-- 选择区 -->
+    <div class="card card-pad" style="margin-top:22px">
+      <div class="grid" style="grid-template-columns:1fr auto 1fr;gap:16px;align-items:center">
+        <div id="picker-a"></div>
+        <div class="flex-center" style="font-weight:800;color:var(--gold);font-size:22px">VS</div>
+        <div id="picker-b"></div>
+      </div>
+      <div class="flex-center" style="margin-top:20px">
+        <button class="btn btn-blue" id="compare-btn" style="padding:12px 40px;font-size:15px">📊 开始对比</button>
+      </div>
+    </div>
+
+    <!-- 结果区 -->
+    <div id="compare-result" style="margin-top:22px"></div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    window.PAGE = 'compare';
+    window.BASE_PATH = '../';
+  </script>
+  <!-- 离线数据层（json 数据以 .js 注入，保证 file:// 直跑可用） -->
+  <script src="../json/heroes.js"></script>
+  <script src="../json/items.js"></script>
+  <script src="../json/details.js"></script>
+  <script src="../json/tiers.js"></script>
+  <script src="../json/season.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/components.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/ai-chat.js"></script>
+  <script src="../js/lib/echarts.min.js"></script>
+  <script src="../js/hero-picker.js"></script>
+  <script src="../js/compare.js"></script>
+
+</body>
+</html>

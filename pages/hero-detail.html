@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>英雄详情 · 王者百科</title>
+  <meta name="description" content="王者荣耀英雄完整攻略：技能解析、出装方案、铭文搭配、连招教学、对位克制、思路梯度。">
+  <link rel="icon" type="image/svg+xml" href="../images/logo.svg">
+  <!-- 主题：样式前应用已保存的主题，避免刷新闪变 -->
+  <script>try{var t=localStorage.getItem('wqk-theme')||'system';document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div id="navbar"></div>
+
+  <main class="container">
+    <!-- 返回链接 + 面包屑 -->
+    <div id="crumb" style="padding:22px 0 6px"></div>
+
+    <!-- 详情主体（hero-detail.js 渲染） -->
+    <div id="detail-root"></div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script>
+    window.PAGE = 'hero';
+    window.BASE_PATH = '../';
+  </script>
+  <!-- 离线数据层（json 数据以 .js 注入，保证 file:// 直跑可用） -->
+  <script src="../json/heroes.js"></script>
+  <script src="../json/items.js"></script>
+  <script src="../json/details.js"></script>
+  <script src="../json/tiers.js"></script>
+  <script src="../json/season.js"></script>
+  <script src="../js/utils.js"></script>
+  <script src="../js/data.js"></script>
+  <script src="../js/components.js"></script>
+  <script src="../js/theme.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/ai-chat.js"></script>
+  <script src="../js/lib/echarts.min.js"></script>
+  <script src="../js/hero-detail.js"></script>
+
+</body>
+</html>
